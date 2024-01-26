@@ -1,0 +1,50 @@
+/*body*/
+/*{*/
+/*    cursor: cell;*/
+/*}*/
+
+.before-start {
+    border: 10px dotted black;
+    font-family: Futura;
+    text-align: center;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    max-width: 600px;
+    /*margin: 0 auto;*/
+    /*padding: 20px;*/
+    margin: 400px 0 0 700px;
+
+}
+.before-start h1
+{
+    color: black;
+}
+
+#startGameBtn {
+    font-family: "Microsoft Sans Serif";
+    max-width: 400px;
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: greenyellow;
+margin-top: 20px;
+    border-radius: 20px;
+}
+.game-field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.hide-cursor {
+    cursor: none;
+}
