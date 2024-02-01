@@ -2,6 +2,33 @@
 /*{*/
 /*    cursor: cell;*/
 /*}*/
+h3
+{
+    font-size: 25px;
+    color: black;
+}
+.hard {
+    color: red;
+}
+.blue
+{
+
+    color:lightskyblue;
+    padding: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+}
+#background {
+    background-image: url('mysticforest.jpg'); /* Replace 'your-background-image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Move the background behind other elements */
+}
 
 .before-start {
     border: 10px dotted black;
@@ -18,6 +45,7 @@
     /*margin: 0 auto;*/
     /*padding: 20px;*/
     margin: 400px 0 0 700px;
+    background-color: rgba(255, 195, 128, 0.7);
 
 }
 .before-start h1
@@ -31,20 +59,102 @@
     padding: 10px 20px;
     font-size: 36px;
     cursor: pointer;
-    background-color: greenyellow;
+    background-color: lightskyblue;
 margin-top: 20px;
     border-radius: 20px;
 }
+.levels
+{
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.levels button.clicked {
+    background-color: #3498db; /* Change the background color to the desired clicked effect */
+    color: #ffffff; /* Change the text color to the desired clicked effect */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8); /* Add a box-shadow to create a dent effect */
+
+}
+#button1
+{
+    font-family: "Microsoft Sans Serif";
+    max-width: 400px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: greenyellow;
+    margin-top: 29px;
+    border-radius: 20px;
+}
+#button2
+{
+    font-family: "Microsoft Sans Serif";
+    max-width: 400px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: orange;
+    margin-top: 29px;
+    border-radius: 20px;
+}
+#button3
+{
+    font-family: "Microsoft Sans Serif";
+    max-width: 400px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: red;
+    margin-top: 29px;
+    border-radius: 20px;
+}
+
 .game-field {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw; /* 80% of the viewport width */
-    height: 80vh; /* 80% of the viewport height */
+    width: 80vw;
+    height: 80vh;
     border: 5px solid black;
     border-radius: 20px;
+    box-shadow: 0 0 10px #a6e4fa, 0 0 20px #a6e4fa, 0 0 30px #a6e4fa; /* Initial glow effect */
 }
+.game-field.lumos-glow {
+    box-shadow: 0 0 20px #a6e4fa, 0 0 30px #a6e4fa, 0 0 40px #a6e4fa; /* Lumos Maxima glow effect */
+}
+
 .hide-cursor {
     cursor: none;
 }
+
+.lumos-cursor {
+    width: 150px; /* Adjust the size as needed */
+    height: auto; /* This maintains the aspect ratio while adjusting the size */
+    position: absolute;
+    pointer-events: none;
+    z-index: 999;
+    filter: drop-shadow(0 0 15px lightblue); /* Add a larger light blue glowing effect along the contours */
+}
+
+.lumos-glow {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/*@keyframes glow {*/
+/*    from {*/
+/*        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffcc80;*/
+/*    }*/
+/*    to {*/
+/*        text-shadow: 0 0 20px #fff, 0 0 30px #ffcc80, 0 0 40px #ffcc80;*/
+/*    }*/
+/*}*/
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #a6e4fa, 0 0 20px #a6e4fa, 0 0 30px #a6e4fa;
+    }
+    to {
+        text-shadow: 0 0 20px #a6e4fa, 0 0 30px #a6e4fa, 0 0 40px #a6e4fa;
+    }
+}
+

@@ -3,11 +3,20 @@
 <head>
     <title>Butterfly Effect</title>
     <link rel="stylesheet" href="stylish.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
+
 </head>
 <body>
-<div class="before-start">
+<div id="background"></div>
+<div class="before-start" id="startingScreen">
     <h1>Butterfly Effect</h1>
     <button id="startGameBtn" onclick="startGame()">Start Game</button>
+    <div class="levels">
+        <button id="button1" onclick="handleButton1()">Easy</button>
+        <button id="button2" onclick="handleButton2()">Medium</button>
+        <button id="button3" onclick="handleButton3()">Hard</button>
+    </div>
+    <h3>*<span class="blue">Lumos</span> (only on <span class="hard">Hard</span>). Figure out how to use wand !</h3>
 </div>
 <script src="gamer.js"></script>
 </body>
